@@ -1,4 +1,4 @@
-const Animal = require("./Animal");
+const Animal = require('./Anima1');
 
 class Gato extends Animal{
 

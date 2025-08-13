@@ -7,7 +7,7 @@ clase padre.
 - Dentro del construcutor de una clase hija, super() se usa para invocar
 el constructor de la clase padre
 */
-const Animal = require("./Animal");
+const Animal = require("./Anima1");
 class Pajaro extends Animal{
 
 

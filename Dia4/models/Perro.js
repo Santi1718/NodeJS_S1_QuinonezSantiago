@@ -1,4 +1,4 @@
-const Animal = require("./Animal");
+const Animal = require("./Anima1");
 /* 
 El polimorfismo permite que métodos con el mismo
 nombre se comporten de manera diferente, según el objeto
