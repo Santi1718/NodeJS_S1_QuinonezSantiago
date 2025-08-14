@@ -66,3 +66,46 @@ while(booleanito){
     let opcionUsuario= showMenu();
     handleMenu(opcionUsuario);
 }
+
+function listItems() {
+    const data = loadData();
+    console.log("\n=== Lista de Personas ===");
+    if (data.length === 0) {
+        console.log("No hay Personas.");
+    } else {
+        data.forEach((item, index) => {
+            console.log(`${index + 1}. ID: ${item.id}, Nombre: ${item.nombre}`);
+        });
+    }
+} 
+
+function updateItem() {
+    const data = loadData();
+    listItems();
+    let id = prompt("Ingresa el ID del Persona a actualizar: ");
+    const index = data.findIndex(item => item.id == id);
+
+    if (index !== -1) {
+        let nuevoNombre = prompt("Ingresa el nuevo nombre: ");
+        data[index].nombre = nuevoNombre;
+        saveData(data);
+        console.log(" Persona actualizado.");
+    } else {
+        console.log(" Persona no encontrado.");
+    }
+}
+
+function deleteItem() {
+    const data = loadData();
+    listItems();
+    let id = prompt("Ingresa el ID de la Persona a eliminar: ");
+    const index = data.findIndex(item => item.id == id);
+
+    if (index !== -1) {
+        data.splice(index, 1);
+        saveData(data);
+        console.log(" Persona eliminado.");
+    } else {
+        console.log(" Persona no encontrado.");
+    }
+}
