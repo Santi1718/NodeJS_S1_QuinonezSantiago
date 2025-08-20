@@ -12,6 +12,6 @@
         }
         const creado = this.model.crear(datos);
         this.view.mostrarMensaje('Creado con ID ${creado.id}.');
-
     }
  }
+ modulo.exports={ItemController};
